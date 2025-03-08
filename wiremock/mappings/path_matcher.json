@@ -1,0 +1,35 @@
+{
+    "mappings": [
+        {
+            "request": {
+                "urlPathTemplate": "/order/{orderId}/status",
+                "method": "GET",
+                "pathParameters": {
+                    "orderId": {
+                        "equalTo": "0001"
+                    }
+                }
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "status.json"
+            }
+        },
+        {
+            "request": {
+                "urlPathTemplate": "/order/{orderId}/status",
+                "method": "GET",
+                "pathParameters": {
+                    "orderId": {
+                        "equalTo": "0002"
+                    }
+                }
+            },
+            "response": {
+                "status": 404,
+                "body": "order {{request.path.orderId}} not found",
+                "transformers": ["response-template"]
+            }
+        }
+    ]
+}
