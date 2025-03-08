@@ -5,6 +5,7 @@ info:
 paths:
   /api/v1/order/{id}/status:
     get:
+      operationId: getOrderStatusById
       summary: Get order status
       parameters:
         - name: id
