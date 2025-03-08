@@ -13,6 +13,14 @@ paths:
           schema:
             type: string
       responses:
+        '404':
+          description: Order not found
+          content:
+            application/json:
+              examples:
+                b002:
+                  value:
+                    message: "Order not found for id: b002"
         '200':
           description: Order found
           content:
@@ -24,11 +32,3 @@ paths:
                 default:
                   value:
                     message: "Default order status message"
-        '404':
-          description: Order not found
-          content:
-            application/json:
-              examples:
-                b002:
-                  value:
-                    message: "Order not found for id: b002"
