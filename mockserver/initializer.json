@@ -9,7 +9,7 @@
     },
     {
         "httpRequest": {
-            "specUrlOrPayload": "file:/../order.yaml"
+            "specUrlOrPayload": "https://raw.githubusercontent.com/hylin0524/PocMockServer/refs/heads/main/order.yaml"
         },
         "httpResponse": {
             "statusCode": 200,
