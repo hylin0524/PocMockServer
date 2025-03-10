@@ -9,11 +9,22 @@
     },
     {
         "httpRequest": {
-            "specUrlOrPayload": "https://raw.githubusercontent.com/hylin0524/PocMockServer/refs/heads/main/order.yaml"
+            "specUrlOrPayload": "https://raw.githubusercontent.com/hylin0524/PocMockServer/refs/heads/main/order.yaml",
+            "operationId": "getOrderStatusById"
         },
         "httpResponse": {
             "statusCode": 200,
             "body": "test order ok"
+        }
+    }, 
+    {
+        "httpRequest": {
+            "specUrlOrPayload": "https://raw.githubusercontent.com/hylin0524/PocMockServer/refs/heads/main/order.yaml",
+            "operationId": "listOrders"
+        },
+        "httpResponse": {
+            "statusCode": 200,
+            "body": ["A001", "A002", "A003"]
         }
     }
 ]
