@@ -7,12 +7,11 @@ docker run -d --name mockserver -p 1080:1080 mockserver/mockserver:latest
 
 - run Docker container with Expectation Initializers
 ```
-docker run -v $(pwd):/config -p 1080:1080 mockserver/mockserver -serverPort 1080
-
 docker run -d --rm \
   -p 1080:1080 \
   -v $(pwd):/config \
   -e MOCKSERVER_INITIALIZATION_JSON_PATH="/config/initializer.json" \
+  --name mockserver \
   mockserver/mockserver
 ```
 
